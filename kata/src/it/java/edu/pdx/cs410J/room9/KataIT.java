@@ -26,5 +26,16 @@ class KataIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("FooFooFoo"));
 
   }
+  @Test
+  void trywith3() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "3");
+    assertThat(result.getTextWrittenToStandardError(), containsString("FooFoo"));
 
+  }
+  @Test
+  void trywith1() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "1");
+    assertThat(result.getTextWrittenToStandardError(), containsString("1"));
+
+  }
 }
